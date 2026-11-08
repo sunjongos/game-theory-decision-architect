@@ -116,6 +116,30 @@ class GameTheoryImmuneAuditor:
             })
             severity = "FATAL"
 
+        
+        # 8. Fair Trade Art 40 collusion check
+        if getattr(payload, "exchanges_competitor_price_info", False):
+            triggers.append({
+                "code": "[TRIGGER-GT-FAIR-TRADE-40]",
+                "severity": "CRITICAL",
+                "name": "공정거래법 제40조 담합 추정 경보",
+                "diagnosis": "경쟁 병원과의 마케팅 자제 합의나 가격·예산 정보 교환은 공정거래법상 부당한 공동행위로 추정되어 형사처벌 및 과징금 대상임.",
+                "remedy": "경쟁사 정보교환을 즉시 중단하고, 장기 공존 반복게임(delta >= 0.5)의 독자적 관찰 판단과 진료 차별화로 전략 전환."
+            })
+            severity = "CRITICAL"
+
+        # 9. Labor Standard Art 20 signing bonus clawback check
+        if getattr(payload, "has_signing_bonus_clawback_clause", False):
+            triggers.append({
+                "code": "[TRIGGER-GT-LABOR-20]",
+                "severity": "HIGH",
+                "name": "근로기준법 제20조 위약 예정 무효 경보",
+                "diagnosis": "사이닝보너스 선지급 후 의무근무 위반 시 전액 반환하게 하는 약정은 위약금 예정으로 대법원 판례상 무효화될 위험이 큼.",
+                "remedy": "'선지급 후 반환' 대신 2~3년에 걸친 '근속 조건부 분할 이연 지급' 구조로 계약 변경."
+            })
+            if severity != "CRITICAL":
+                severity = "HIGH"
+
         is_safe = len(triggers) == 0
         return {
             "scenario": payload.scenario_name,
