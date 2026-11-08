@@ -163,5 +163,81 @@ def main():
         parser.print_help()
 
 
+
+
+class HospitalMechanismCalculator:
+    """
+    Mathematical decision calculators for hospital management & clinical operations
+    """
+    @staticmethod
+    def loyalty_threshold(future_loyalty_payoff_L: float, outside_offer_D: float) -> Dict[str, Any]:
+        """
+        Calculates loyalty threshold probability p* = L / (L + D)
+        """
+        if future_loyalty_payoff_L + outside_offer_D <= 0:
+            return {"error": "Invalid payoffs"}
+        p_star = future_loyalty_payoff_L / (future_loyalty_payoff_L + outside_offer_D)
+        return {
+            "future_loyalty_payoff_L": future_loyalty_payoff_L,
+            "outside_offer_D": outside_offer_D,
+            "loyalty_threshold_p_star": round(p_star, 4),
+            "loyalty_threshold_pct": round(p_star * 100, 2),
+            "interpretation": f"상대방의 이직 성공 확률이 {round(p_star * 100, 1)}% 이하일 때 병원에 잔류함. L을 늘릴수록 잔류 내성 강화."
+        }
+
+    @staticmethod
+    def shapley_spine_center() -> Dict[str, Any]:
+        """
+        Shapley value calculation for NDB Spine Center (Ortho O, Pain P, Rehab R)
+        v(O)=6, v(P)=3, v(R)=1, v(OP)=12, v(OR)=9, v(PR)=5, v(OPR)=18
+        """
+        # Shapley values analytically computed over 6 permutations
+        # O: 9.167 (50.9%), P: 5.667 (31.5%), R: 3.167 (17.6%)
+        return {
+            "grand_coalition_value": 18,
+            "shapley_values": {
+                "ortho_surgery_O": round(55.0 / 6.0, 2),   # 9.17
+                "pain_intervention_P": round(34.0 / 6.0, 2),# 5.67
+                "rehabilitation_R": round(19.0 / 6.0, 2)   # 3.17
+            },
+            "ratio_percentage": {
+                "ortho_surgery_O": 50.9,
+                "pain_intervention_P": 31.5,
+                "rehabilitation_R": 17.6
+            },
+            "policy_implication": "단순 매출 비율(재활 1.8) 대신 섀플리 값 3.17을 배분해야 재활의학과의 다학제 협진 참여 유인이 유지됨."
+        }
+
+    @staticmethod
+    def nursing_bankrun_threshold(stay_payoff: float = 6.0, solo_payoff: float = 2.0, leave_payoff: float = 5.0) -> Dict[str, Any]:
+        """
+        Coordination game threshold q* for nursing turnover bank run:
+        q* * stay + (1 - q*) * solo >= leave <=> q* = (leave - solo) / (stay - solo)
+        """
+        q_star = (leave_payoff - solo_payoff) / (stay_payoff - solo_payoff)
+        return {
+            "stay_payoff": stay_payoff,
+            "solo_left_payoff": solo_payoff,
+            "leave_payoff": leave_payoff,
+            "threshold_q_star": round(q_star, 4),
+            "threshold_q_star_pct": round(q_star * 100, 2),
+            "policy_insight": "동료 잔류 믿음이 q* 이상이어야 잔류함. '혼자 남을 때 대체인력 풀'을 제공해 solo_payoff를 2->4로 올리면 q*가 75%에서 50%로 대폭 개선됨."
+        }
+
+    @staticmethod
+    def radiology_make_or_buy(unit_buy_cost_krw: int = 20000, monthly_admin_cost_krw: int = 8000000, monthly_fixed_make_cost_krw: int = 65000000) -> Dict[str, Any]:
+        """
+        Transaction cost economics make vs buy breakeven:
+        unit_buy * N + admin == fixed_make <=> N* = (fixed_make - admin) / unit_buy
+        """
+        bep_n = int((monthly_fixed_make_cost_krw - monthly_admin_cost_krw) / unit_buy_cost_krw)
+        return {
+            "unit_buy_cost_krw": unit_buy_cost_krw,
+            "monthly_admin_cost_krw": monthly_admin_cost_krw,
+            "monthly_fixed_make_cost_krw": monthly_fixed_make_cost_krw,
+            "breakeven_monthly_reads_N_star": bep_n,
+            "decision_rule": f"월 판독량이 {bep_n:,}건을 초과하면 직영(Make)이 유리함."
+        }
+
 if __name__ == "__main__":
     main()
