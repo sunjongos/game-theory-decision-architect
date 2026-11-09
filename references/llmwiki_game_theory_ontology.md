@@ -56,3 +56,23 @@ total_nodes: 8
 ### [[WIKI-GT-08]]: Coordination & Price of Anarchy
 - **Axioms**: Stag Hunt payoff dominance vs risk dominance.
 - **PoA (Price of Anarchy)**: $\text{PoA} = \frac{\max_{s} W(s)}{\min_{s \in \text{NE}} W(s)}$. Measures efficiency loss of decentralized selfish behavior.
+
+
+| `[[WIKI-GT-09]]` | Auction & Succession | Succession Dilemma, Milgrom Simultaneous Auction & Qing Secret Succession (밀건법) | `eval_sequence`, `n_candidates`, `info_learning` | `[[WIKI-GT-02]]`, `[[WIKI-GT-05]]` |
+| `[[WIKI-GT-10]]` | Public Choice & Voting | Arrow Impossibility, May's Trench War, Condorcet vs Borda & Ranked-Choice | `plurality_bias`, `borda_points`, `veto_power` | `[[WIKI-GT-01]]`, `[[WIKI-GT-08]]` |
+| `[[WIKI-GT-11]]` | Epistemology & Beliefs | Bayesian Updating, Occupational Sample Bias & Probability Calibration (영점조절) | `prior_prob`, `sample_bias`, `calibration_error` | `[[WIKI-GT-06]]`, `[[WIKI-GT-07]]` |
+
+---
+
+### [[WIKI-GT-09]]: Succession Dilemma & Simultaneous Auction (밀건법)
+- **Axioms**: Sequential evaluation penalizes early front-runners for minor flaws while late entrants pass unvetted.
+- **Remedy**: Simultaneous multi-object auction (Milgrom-Wilson) and Qing Dynasty Secret Succession System (밀건법) — evaluate all candidates concurrently at fixed deadline.
+
+### [[WIKI-GT-10]]: Public Choice, Arrow Impossibility & Ranked-Choice Voting
+- **Axioms**: Single-vote plurality creates negative campaigning and pandering to polarized minorities (회식 메뉴의 역설).
+- **Remedy**: Borda Count scoring and Ranked-Choice Ballots to elect candidates with broad consensus rather than intense narrow appeal.
+
+### [[WIKI-GT-11]]: Bayesian Updating, Sample Bias & Probability Calibration
+- **Axioms**: Humans update subjective beliefs based on narrow occupational samples (중환자실 의사, 특수교사, 판사 효과).
+- **Historical Contrast**: Commodus & Yeonsangun (Excessive Positive Bias) vs Gwanghaegun (Excessive Negative Bias).
+- **Remedy**: Continuous calibration of subjective probabilities against objective base rates via reading and diverse indirect learning.

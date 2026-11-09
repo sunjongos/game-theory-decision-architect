@@ -263,5 +263,47 @@ class HospitalMechanismCalculator:
             "decision_rule": f"월 판독량이 {bep_n:,}건을 초과하면 직영(Make)이 유리함."
         }
 
+
+class DecisionPitfallsEvaluator:
+    """
+    Evaluator for Auction Succession, Voting Systems, and Bayesian Calibration
+    """
+    @staticmethod
+    def succession_audit(is_sequential: bool, candidate_count: int) -> Dict[str, Any]:
+        if is_sequential:
+            return {
+                "system": "순차적 심사 (Sequential Evaluation)",
+                "risk": "HIGH_VULNERABILITY",
+                "diagnosis": "초반 유력 후보는 사소한 흠결에 집중 견제되어 낙마하고, 마지막 후보는 대안 부재로 치명적 결격자임에도 졸속 당선될 위험 큼.",
+                "remedy": "청나라 황태자 밀건법(密建法) 및 밀그롬 동시 경매 적용: 모든 후보를 동일 시점에 걸어두고 시작과 종료를 일치시켜 동시 비교·검증."
+            }
+        return {
+            "system": "동시 심사 (Simultaneous Evaluation / 밀건법)",
+            "status": "APPROVED",
+            "diagnosis": f"{candidate_count}명의 후보가 상호 비교·학습을 거치며 정당한 가치 평가에 도달함."
+        }
+
+    @staticmethod
+    def voting_simulation(first_choice_pct: Dict[str, float], pairwise_matrix: Optional[Dict[str, Dict[str, float]]] = None) -> Dict[str, Any]:
+        plurality_winner = max(first_choice_pct, key=first_choice_pct.get)
+        return {
+            "plurality_winner": plurality_winner,
+            "plurality_shares": first_choice_pct,
+            "warning": "1인 1표 최선호 투표는 비호감도와 2·3순위 선호를 묵살하여 과반수가 반대하는 후보가 당선되는 왜곡 발생 가능(회식 메뉴 역설).",
+            "recommendation": "선호 순위 투표용지(Ranked-Choice Ballot) 또는 보르다 투표(Borda Count) 도입 권고."
+        }
+
+    @staticmethod
+    def bayesian_calibration(objective_base_rate_pct: float, subjective_belief_pct: float, occupation_context: str = "") -> Dict[str, Any]:
+        bias = subjective_belief_pct - objective_base_rate_pct
+        return {
+            "occupation_context": occupation_context,
+            "objective_base_rate_pct": objective_base_rate_pct,
+            "subjective_belief_pct": subjective_belief_pct,
+            "calibration_error_pct": round(bias, 2),
+            "diagnosis": "과도한 부정 편향 (광해군 증후군: 기회 상실 위험)" if bias > 10 else ("과도한 긍정 편향 (콤모두스·연산군 증후군: 파멸 위험)" if bias < -10 else "영점 조절 양호 (Calibrated)"),
+            "prescription": "직업적·일상적 협소한 표본을 벗어나, 객관적 통계와 독서를 통해 주관적 확률을 5% 수준으로 영점 조절해야 함."
+        }
+
 if __name__ == "__main__":
     main()
