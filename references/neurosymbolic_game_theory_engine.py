@@ -305,5 +305,46 @@ class DecisionPitfallsEvaluator:
             "prescription": "직업적·일상적 협소한 표본을 벗어나, 객관적 통계와 독서를 통해 주관적 확률을 5% 수준으로 영점 조절해야 함."
         }
 
+
+class BayesianFiveStepCalibrator:
+    """
+    5-Step Thought Calibration Engine: Eliminates AI Overconfidence and Anchoring
+    """
+    @staticmethod
+    def calibrate(base_rate_pct: float, evidence_deltas: List[float], raw_ai_confidence_pct: float, is_high_stakes: bool = True) -> Dict[str, Any]:
+        # Step 1: Clamp base rate (no 0% or 100%)
+        prior = max(1.0, min(99.0, base_rate_pct))
+        
+        # Step 3: Explicit step update
+        updated_prob = prior + sum(evidence_deltas)
+        updated_prob = max(1.0, min(99.0, updated_prob))
+        
+        # Step 4: Confidence deflation (deflate raw AI overconfidence towards updated prob)
+        # Brier score / temperature scaling penalty
+        overconfidence_gap = raw_ai_confidence_pct - updated_prob
+        deflation_penalty = overconfidence_gap * 0.4 if overconfidence_gap > 0 else 0
+        calibrated_prob = round(updated_prob - deflation_penalty, 1)
+        
+        # Step 5: Action thresholding
+        threshold = 90.0 if is_high_stakes else 60.0
+        can_execute = calibrated_prob >= threshold
+        
+        action_decision = "EXECUTE" if can_execute else ("HALT_AND_PROBE" if calibrated_prob >= 40.0 else "REJECT_ABORT")
+        missing_info_probe = None
+        if action_decision == "HALT_AND_PROBE":
+            missing_info_probe = "승률이 불확실한 구간입니다. 섣불리 결론 내지 말고, 가설 검증을 바꿀 '가장 중요한 단 하나의 추가 팩트'를 먼저 확인하십시오."
+
+        return {
+            "step1_prior_base_rate": prior,
+            "step2_evidence_count": len(evidence_deltas),
+            "step3_updated_prob": round(updated_prob, 1),
+            "step4_raw_confidence": raw_ai_confidence_pct,
+            "step4_calibrated_prob": calibrated_prob,
+            "step5_stakes": "HIGH_STAKES (건강·대규모 자금, 기준선 90%)" if is_high_stakes else "LOW_STAKES (경상 업무, 기준선 60%)",
+            "step5_threshold": threshold,
+            "action_decision": action_decision,
+            "missing_info_probe": missing_info_probe
+        }
+
 if __name__ == "__main__":
     main()

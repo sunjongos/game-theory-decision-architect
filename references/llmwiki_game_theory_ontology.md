@@ -76,3 +76,17 @@ total_nodes: 8
 - **Axioms**: Humans update subjective beliefs based on narrow occupational samples (중환자실 의사, 특수교사, 판사 효과).
 - **Historical Contrast**: Commodus & Yeonsangun (Excessive Positive Bias) vs Gwanghaegun (Excessive Negative Bias).
 - **Remedy**: Continuous calibration of subjective probabilities against objective base rates via reading and diverse indirect learning.
+
+
+| `[[WIKI-GT-12]]` | Epistemology & AI | 5-Step Bayesian Calibration Pipeline, Brier Score & Decision Threshold Gating | `base_rate`, `evidence_weights`, `calibrated_confidence`, `stakes_threshold` | `[[WIKI-GT-11]]`, `[[WIKI-GT-07]]` |
+
+---
+
+### [[WIKI-GT-12]]: 5-Step Bayesian Calibration Pipeline & AI Gating
+- **Axioms**: Uncalibrated AI bluffs 95% certainty on 50% guesses. Subjective belief must be adjusted by explicit 5-step gating.
+- **Rules**:
+  1. Base Rate Anchor (No 0% or 100%).
+  2. Single Evidence per Root Source (De-duplicate 5 copycat articles into 1 signal).
+  3. Step-by-step arithmetic updating.
+  4. Brier score / Temperature scaling for confidence deflation.
+  5. Asymmetric loss thresholding: High-Stakes $\ge 90\%$, Low-Stakes $\ge 60\%$. If uncertain, trigger Missing Info Probe instead of forcing a decision.
