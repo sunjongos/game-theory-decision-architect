@@ -90,3 +90,13 @@ total_nodes: 8
   3. Step-by-step arithmetic updating.
   4. Brier score / Temperature scaling for confidence deflation.
   5. Asymmetric loss thresholding: High-Stakes $\ge 90\%$, Low-Stakes $\ge 60\%$. If uncertain, trigger Missing Info Probe instead of forcing a decision.
+
+
+| `[[WIKI-GT-13]]` | Physical Foundations | Thermodynamic Mechanism Design, Gibbs Free Energy (ΔG < 0) & Open System Negentropy | `delta_G`, `delta_H`, `temperature_T`, `entropy_delta_S` | `[[WIKI-GT-05]]`, `[[WIKI-GT-08]]` |
+
+---
+
+### [[WIKI-GT-13]]: Thermodynamic Mechanism Design & Spontaneous Equilibrium
+- **Axioms**: $\Delta G = \Delta H - T\Delta S < 0$ is the universal condition for spontaneous physical and economic action.
+- **Samuelson Bridge**: Paul Samuelson integrated Gibbsian thermodynamics into mathematical economics.
+- **Rules**: Organizations do not passively decay into disorder if modeled as Open Systems with continuous information input. Design rules such that truthful revelation and cooperation minimize systemic free energy ($\Delta G < 0$).

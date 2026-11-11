@@ -186,3 +186,21 @@ The engine enforces the 5-step decision calibration workflow to eliminate AI ove
    - 승률이 애매한 구간이면 억지로 결론 내지 않고 **"승률을 확실히 알기 위해 우리가 추가로 확인해야 할 가장 중요한 한 가지가 무엇인가?"**를 질문하고 멈춤.
 6. **결정 일기(Decision Journal) 루프**:
    - `[날짜 / 예상 확률 / 이유 한 줄 / 실제 결과]` 오답 노트를 누적하여 지속적으로 AI와 인간의 예측 눈금을 교정.
+
+
+---
+
+## Thermodynamic Foundations of Mechanism Design (열역학적 깁스 에너지와 메커니즘 디자인)
+
+The engine bridges statistical thermodynamics (J. Willard Gibbs) and mathematical mechanism design (Paul Samuelson, Eric Maskin):
+
+### 1. 깁스 자유 에너지($\Delta G = \Delta H - T\Delta S$)와 자발적 협력(Incentive Compatibility)
+- **자발적 반응의 법칙**: 공이 언덕에서 바닥으로 굴러가듯, $\Delta G < 0$ (자유 에너지가 감소하여 안정화되는 방향)일 때 외력이 없어도 반응은 스스로 일어난다.
+- **제도 설계로의 번역**:
+  - 엔탈피 마찰($\Delta H$): 의무 수행에 따르는 심리적·물리적 노력 비용.
+  - 엔트로피 다변성($T\Delta S$): 선택의 자유와 미래 보상 다양성에 대한 인센티브 온도($T$).
+  - **참여자의 효용 변화가 $\Delta G < 0$이 되도록 룰(Rule)을 설계하면, 경영진이 감시하거나 강제하지 않아도 구성원은 자발적으로 정직과 협력을 선택(Dominant Strategy)한다.**
+
+### 2. 열린계(Open System)와 엔트로피 비관론 극복
+- 잉크가 고르게 퍼진 상태는 '무질서'가 아니라 최대 확률 상태($S = k \log W$)일 뿐이며, 적절한 압력과 필터(조건)를 부여하면 언제든 분리 가능하다.
+- 조직과 경제는 닫힌 고립계가 아니라 지속적으로 지식과 자본이 유입되는 **'열린계(Open System)'**이므로, 정교한 환경 조건을 설계하는 한 조직의 와해(열사망)를 방지하고 고도의 질서를 영구히 유지할 수 있다.
