@@ -346,5 +346,46 @@ class BayesianFiveStepCalibrator:
             "missing_info_probe": missing_info_probe
         }
 
+
+class EvolutionaryGameEvaluator:
+    """
+    Evaluator for Hamilton's Rule and Tit-for-Tat Reciprocal Cooperation
+    """
+    @staticmethod
+    def hamilton_rule_audit(relatedness_r: float, benefit_B: float, cost_C: float) -> Dict[str, Any]:
+        rb = relatedness_r * benefit_B
+        net_altruistic_fitness = rb - cost_C
+        is_viable = net_altruistic_fitness > 0
+        return {
+            "relatedness_r": relatedness_r,
+            "benefit_B": benefit_B,
+            "cost_C": cost_C,
+            "rB": round(rb, 2),
+            "altruism_viable": is_viable,
+            "diagnosis": "유전자 사본 관점에서 이타적 헌신이 진화적으로 보상됨 (rB > C)" if is_viable else "개체의 희생이 유전적 이익을 초과하여 자연선택에서 도태됨 (rB <= C)",
+            "management_translation": "직원은 r=0이므로 도덕적 헌신 강요 금지. 인센티브/지분 설계를 통해 인위적 공유도 r을 부여해야 함."
+        }
+
+    @staticmethod
+    def tit_for_tat_strategy_audit(is_nice: bool, is_retaliatory: bool, is_forgiving: bool, is_clear: bool) -> Dict[str, Any]:
+        flaws = []
+        if not is_nice:
+            flaws.append("먼저 배신(선제 공격)하여 불필요한 보복 악순환을 자초함.")
+        if not is_retaliatory:
+            flaws.append("배신당하고도 즉각 보복하지 않아 사기꾼과 무임승차자의 '호구(Sucker)'가 됨.")
+        if not is_forgiving:
+            flaws.append("상대가 협력으로 복귀해도 용서하지 않아 무한 치킨게임으로 공멸함.")
+        if not is_clear:
+            flaws.append("전략이 모호하여 상대방이 협력의 이득을 계산하지 못하고 오판을 유도함.")
+
+        is_perfect_tft = len(flaws) == 0
+        return {
+            "strategy": "Tit-for-Tat (팃포탯)",
+            "is_evolutionarily_stable": is_perfect_tft,
+            "flaws": flaws,
+            "score": f"{4 - len(flaws)} / 4",
+            "golden_rule": "1) 먼저 신의(Nice), 2) 배신 시 즉각 보복(Retaliatory), 3) 복귀 시 즉각 용서(Forgiving), 4) 단순 투명한 원칙(Clear)."
+        }
+
 if __name__ == "__main__":
     main()

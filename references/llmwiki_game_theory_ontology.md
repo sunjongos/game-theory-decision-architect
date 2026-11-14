@@ -100,3 +100,17 @@ total_nodes: 8
 - **Axioms**: $\Delta G = \Delta H - T\Delta S < 0$ is the universal condition for spontaneous physical and economic action.
 - **Samuelson Bridge**: Paul Samuelson integrated Gibbsian thermodynamics into mathematical economics.
 - **Rules**: Organizations do not passively decay into disorder if modeled as Open Systems with continuous information input. Design rules such that truthful revelation and cooperation minimize systemic free energy ($\Delta G < 0$).
+
+
+| `[[WIKI-GT-14]]` | Evolutionary Dynamics | The Selfish Gene, Hamilton's Rule (rB > C), Axelrod's Tournament & Tit-for-Tat 4 Axioms | `relatedness_r`, `benefit_B`, `cost_C`, `shadow_delta`, `meme_rule` | `[[WIKI-GT-01]]`, `[[WIKI-GT-06]]` |
+
+---
+
+### [[WIKI-GT-14]]: The Selfish Gene, Kin Selection & Tit-for-Tat ESS
+- **Axioms**: Natural selection acts on genes. Altruism evolves via $rB > C$ (kin) or repeated interaction discount $\delta$ (reciprocal).
+- **Tit-for-Tat ESS**:
+  1. Nice: Never defect first.
+  2. Retaliatory: Punish defection immediately.
+  3. Forgiving: Cooperate immediately upon opponent's return to cooperation.
+  4. Clear: Predictable, transparent strategy.
+- **Meme Rebel**: Memetic constitutional rules override raw biological genetic optimization.
