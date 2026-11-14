@@ -228,3 +228,17 @@ The engine incorporates evolutionary biology and Axelrod's repeated game tournam
 ### 3. 밈(Meme)과 헌법 (Constitution)
 - 인간은 뇌와 문화적 복제자(Meme)를 통해 이기적 유전자의 생물학적 명령에 반역(Rebel)할 수 있는 유일한 존재.
 - 운영 헌법과 시스템 온톨로지는 단기적 이기심과 동물적 본능을 통제하여 조직의 높은 질서(부의 엔트로피)를 창출하는 최고 차원의 밈(Meme)임.
+
+
+---
+
+## Foundational Human Axiom: The 3-Tier Objective Function (인간의 3대 목적함수 제1원리)
+
+All game-theoretic payoffs, strategy spaces, and incentive structures are grounded in the representative's foundational human axiom:
+
+$$\max u_i = f(\text{Survival (생존)}, \text{Reproduction (생식)}, \text{Prosperity (번영)})$$
+
+1. **Survival (생존)**: Core biological hardware maintenance, energy acquisition, and risk minimization.
+2. **Reproduction (생식)**: Gene copy propagation through kin selection ($rB > C$).
+3. **Prosperity (번영)**: The distinct human 3rd dimension. Capital accumulation, reputational networks, memetic legacy, and civilizational expansion.
+4. **Leadership by Incentive Alignment**: Never appeal to empty moral self-sacrifice. Design the mechanism such that contributing to the firm's objective is the mathematically dominant path to the agent's individual survival and prosperity.

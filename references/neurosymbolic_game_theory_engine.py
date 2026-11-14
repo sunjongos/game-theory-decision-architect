@@ -387,5 +387,21 @@ class EvolutionaryGameEvaluator:
             "golden_rule": "1) 먼저 신의(Nice), 2) 배신 시 즉각 보복(Retaliatory), 3) 복귀 시 즉각 용서(Forgiving), 4) 단순 투명한 원칙(Clear)."
         }
 
+
+class HumanObjectiveEvaluator:
+    """
+    Evaluator for 3-Tier Human Objective Function: max u_i = f(Survival, Reproduction, Prosperity)
+    """
+    @staticmethod
+    def evaluate_alignment(agent_survival_benefit: bool, agent_prosperity_benefit: bool, org_goal_benefit: bool) -> Dict[str, Any]:
+        aligned = (agent_survival_benefit or agent_prosperity_benefit) and org_goal_benefit
+        return {
+            "agent_objective_served": agent_survival_benefit or agent_prosperity_benefit,
+            "organizational_goal_served": org_goal_benefit,
+            "incentive_aligned": aligned,
+            "diagnosis": "유인 일치(Incentive Alignment) 성공: 직원이 자신의 생존과 번영을 위해 자발적으로 협력함." if aligned else "유인 불일치(Incentive Conflict): 도덕적 헌신 강요로 인해 무임승차 또는 이탈 위험 높음.",
+            "prescription": "직원의 개인 목적함수(급여, 성장, 미래 안정)와 병원 목표를 1:1로 묶는 보상 메커니즘 재설계 필요."
+        }
+
 if __name__ == "__main__":
     main()

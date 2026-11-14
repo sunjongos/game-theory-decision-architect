@@ -114,3 +114,12 @@ total_nodes: 8
   3. Forgiving: Cooperate immediately upon opponent's return to cooperation.
   4. Clear: Predictable, transparent strategy.
 - **Meme Rebel**: Memetic constitutional rules override raw biological genetic optimization.
+
+
+| `[[WIKI-GT-15]]` | Behavioral Axioms | Human 3-Tier Objective Function (Survival, Reproduction, Prosperity) & Selfish Gene Alignment | `u_survival`, `u_reproduction`, `u_prosperity`, `incentive_alignment` | `[[WIKI-GT-03]]`, `[[WIKI-GT-14]]` |
+
+---
+
+### [[WIKI-GT-15]]: Human 3-Tier Objective Function & First Principle of Governance
+- **Axioms**: All human behavior maximizes $\max u_i = f(\text{Survival}, \text{Reproduction}, \text{Prosperity})$. Driven by the Selfish Gene.
+- **Rule**: Eliminate moralistic disillusionment. Align individual $u_i$ with organizational goals via mechanism design.
