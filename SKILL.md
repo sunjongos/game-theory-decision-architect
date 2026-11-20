@@ -242,3 +242,22 @@ $$\max u_i = f(\text{Survival (생존)}, \text{Reproduction (생식)}, \text{Pro
 2. **Reproduction (생식)**: Gene copy propagation through kin selection ($rB > C$).
 3. **Prosperity (번영)**: The distinct human 3rd dimension. Capital accumulation, reputational networks, memetic legacy, and civilizational expansion.
 4. **Leadership by Incentive Alignment**: Never appeal to empty moral self-sacrifice. Design the mechanism such that contributing to the firm's objective is the mathematically dominant path to the agent's individual survival and prosperity.
+
+
+---
+
+## Executive Human Governance: Platform Illusion & BATNA Salience (플랫폼 착시와 상시대체재 메커니즘)
+
+The engine enforces the representative's core leadership axiom on human nature:
+
+### 1. 플랫폼 착시(Self-Serving Bias)와 목적함수 변이
+- 결핍이 해소되어 등 따시고 배부르면 목적함수가 '생존'에서 '오만과 탐욕'으로 변이한다.
+- 플랫폼(병원 브랜드, 220명 서포트, 장비, 자본, 리더의 무한책임) 덕분에 매출을 냈으면서도 "내가 잘나서 돈을 번다"고 착각하여 조직을 인질화(Hold-up)하려 한다.
+
+### 2. 제압하는 3대 통솔 메커니즘 (Executive Control)
+1. **상시 대체재(BATNA)의 싸늘한 노출**:
+   - 머리가 커지는 유일한 이유는 "나를 대체할 사람이 없다"고 믿기 때문임. 선제적 영입 파이프라인을 상시 가동해 언제든 대체될 수 있음을 무언으로 체감시킴.
+2. **배부른 고정급 배제 & 결핍과 보상의 순환 (Base-Incentive)**:
+   - 스스로 뛰지 않으면 배고파지고 성과를 내야만 번영할 수 있는 룰 설계.
+3. **팃포탯(Tit-for-Tat) 즉각 응징**:
+   - 룰을 흔들려 할 때는 1초도 봐주지 않고 계약서대로 위약벌과 페널티를 즉시 집행.

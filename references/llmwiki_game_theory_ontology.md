@@ -123,3 +123,12 @@ total_nodes: 8
 ### [[WIKI-GT-15]]: Human 3-Tier Objective Function & First Principle of Governance
 - **Axioms**: All human behavior maximizes $\max u_i = f(\text{Survival}, \text{Reproduction}, \text{Prosperity})$. Driven by the Selfish Gene.
 - **Rule**: Eliminate moralistic disillusionment. Align individual $u_i$ with organizational goals via mechanism design.
+
+
+| `[[WIKI-GT-16]]` | Executive Leadership | Platform Illusion (Self-Serving Bias), Entitlement Drift, Hold-up Mitigation & BATNA Salience | `platform_rent`, `attribution_bias`, `batna_threat`, `incentive_cycling` | `[[WIKI-GT-02]]`, `[[WIKI-GT-15]]` |
+
+---
+
+### [[WIKI-GT-16]]: Platform Illusion & Executive BATNA Enforcement
+- **Axioms**: When basic needs are satiated, agents attribute platform rents to personal talent, resulting in hold-up demands.
+- **Rule**: Never rely on past favors. Counter hold-up by making outside alternatives (BATNA) constantly visible and cycling incentives via performance pay.
