@@ -261,3 +261,46 @@ The engine enforces the representative's core leadership axiom on human nature:
    - 스스로 뛰지 않으면 배고파지고 성과를 내야만 번영할 수 있는 룰 설계.
 3. **팃포탯(Tit-for-Tat) 즉각 응징**:
    - 룰을 흔들려 할 때는 1초도 봐주지 않고 계약서대로 위약벌과 페널티를 즉시 집행.
+
+
+---
+
+## 2026 Game Theory Complete Master Framework: 21 Chapters & 7-Step Diagnostics (게임이론 완벽이해서 2026 확장판)
+
+Grounded in the 74-page master treatise by Sun Jong Choi (2026), this skill integrates the comprehensive 5-Part, 21-Chapter architecture:
+
+### 1. The 8 Core Axioms of Game Theory (게임이론의 8대 정수)
+1. **상호의존 (Interdependence)**: 결과는 나 혼자 정하지 못하며, 상대도 나를 보며 계산한다.
+2. **유인 (Incentives)**: 사람은 말이 아니라 보수(Payoff)와 손익에 반응한다.
+3. **균형의 함정 (Equilibrium Trap)**: 각자의 최선(개인 합리성)이 모두의 최선(집단 합리성)은 아니다.
+4. **끝에서부터 (Backward Induction)**: 마지막 수의 결과가 오늘의 행동을 결정한다.
+5. **미래의 그림자 (Shadow of the Future)**: 관계가 반복될 때만 협력이 우월전략이 된다 ($\delta \ge \frac{T-R}{T-P}$).
+6. **신빙성 (Credible Commitment)**: 실행할 인센티브가 있는 약속과 위협만 힘이 있다 (퇴로 차단).
+7. **정보 (Asymmetric Info & Costly Signal)**: 비용이 든 신호(Costly Signal)만 신뢰할 수 있다.
+8. **규칙 설계 (Mechanism Design)**: 사람을 도덕적으로 바꾸려 하지 말고 게임의 규칙을 바꾼다.
+
+---
+
+### 2. The 7-Step Practical Diagnostic Tree (7대 실전 진단 질문)
+Every strategic dilemma or conflict presented to this skill must undergo the 7-step diagnostic query:
+1. **누가 경기자인가?** (규제기관, 잠재 진입자, 고객, 원내 실무자 누락 방지)
+2. **각자 무엇을 원하는가?** (금전 보상 외에 평판, 권력, 공정성, 심리적 안정성 매핑)
+3. **동시인가, 순서가 있는가?** (순서가 있으면 역진귀납으로 끝에서부터 분석)
+4. **한 번인가, 반복되는가?** (반복 시 재회 확률 $\delta$ 및 팃포탯 응징 가능성 점검)
+5. **누가 무엇을 모르는가?** (유형 비대칭은 신호/선별, 행동 비대칭은 모니터링/인센티브)
+6. **약속을 강제할 수 있는가?** (불가하면 선제 구속 장치와 상호 인질 설계)
+7. **게임의 규칙을 바꿀 수 있는가?** (경기자 입장에서 벗어나 메커니즘 설계자로 전환)
+
+---
+
+### 3. Symptom-to-Prescription Matrix (증상별 메커니즘 처방표)
+
+| 관찰되는 증상 / 문제 상황 | 게임이론 진단 | 핵심 처방 및 연결 노드 |
+| :--- | :--- | :--- |
+| 모두에게 이득인 합의가 있는데 아무도 먼저 움직이지 않음 | 용의자의 딜레마 / 사슴 사냥 | 반복 구조화, Grim Trigger/팃포탯 응징 규정, 단계별 동시 이행 (`[[WIKI-GT-01]]`, `[[WIKI-GT-21]]`) |
+| 계약 만료가 다가올수록 협력사·직원의 성실도 급락 | 유한 반복게임의 마지막 턴 배신 | 계약 자동 연장 조건, 종료 후 정산 유보금(Escrow), 이연 보상 (`[[WIKI-GT-02]]`, `[[WIKI-GT-03]]`) |
+| 기피 업무나 위험 프로젝트를 아무도 맡지 않으려 함 | 비대칭 치킨 게임 / 소모전 | 복수 경쟁 공모(경주 방폐장 모델), 명확한 인센티브 패키지 (`[[WIKI-GT-05]]`, `[[WIKI-GT-22]]`) |
+| 가격 인하 출혈경쟁으로 업계 전체 마진 소멸 | 베르트랑 가격 경쟁의 함정 | 가격 경쟁 전면 중단, 비가격 서비스·임상 품질 차별화 (`[[WIKI-GT-19]]`) |
+| 병원 공용 장비·수술실 슬롯의 무분별한 선점 및 사재기 | 공유지의 비극 / 무임승차 | 오스트롬 8원칙 자치 관리, 공동 계기판 상호 모니터링, 피보탈 과세 (`[[WIKI-GT-20]]`, `[[WIKI-GT-05]]`) |
+| 상대방이 무리한 요구를 지속하며 벼랑끝으로 몰아붙임 | 벼랑끝 전술 (Brinkmanship) | 상대방의 통제 불가능 확률 위험 해체, 상시 대체재(BATNA) 가시화 (`[[WIKI-GT-22]]`, `[[WIKI-GT-16]]`) |
+| 가격 알고리즘 및 AI 도입 후 과점 담합 또는 편향 발생 | 알고리즘 담합 / 에이전트 정렬 실패 | 알고리즘 실시간 모니터링, 전략 방어 감사 게이트 구축 (`[[WIKI-GT-17]]`, `[[WIKI-GT-18]]`) |

@@ -403,5 +403,94 @@ class HumanObjectiveEvaluator:
             "prescription": "직원의 개인 목적함수(급여, 성장, 미래 안정)와 병원 목표를 1:1로 묶는 보상 메커니즘 재설계 필요."
         }
 
+
+class ShapleyValueCalculator:
+    """
+    Cooperative Game Theory: Shapley Value Calculation (9장)
+    Allocates total joint payoff based on expected marginal contributions.
+    """
+    @staticmethod
+    def calculate_3player_shapley(v_dict: Dict[str, float]) -> Dict[str, float]:
+        """
+        v_dict keys: "A", "B", "C", "AB", "AC", "BC", "ABC"
+        """
+        import itertools
+        players = ["A", "B", "C"]
+        perms = list(itertools.permutations(players))
+        shapley = {"A": 0.0, "B": 0.0, "C": 0.0}
+        
+        for p in perms:
+            current_set = set()
+            for player in p:
+                val_before = v_dict.get("".join(sorted(list(current_set))), 0.0)
+                current_set.add(player)
+                val_after = v_dict.get("".join(sorted(list(current_set))), 0.0)
+                marginal = val_after - val_before
+                shapley[player] += marginal / len(perms)
+                
+        return {k: round(v, 2) for k, v in shapley.items()}
+
+
+class AlgorithmicCollusionAuditor:
+    """
+    AI Era: Algorithmic Tacit Collusion Auditor (11장)
+    Checks whether pricing bots or automated trading agents sustain supra-competitive collusion.
+    """
+    @staticmethod
+    def audit_pricing_bots(instant_detection: bool, automated_retaliation: bool, market_transparency: bool) -> Dict[str, Any]:
+        collusion_risk_score = 0
+        if instant_detection:
+            collusion_risk_score += 40
+        if automated_retaliation:
+            collusion_risk_score += 40
+        if market_transparency:
+            collusion_risk_score += 20
+            
+        return {
+            "collusion_risk_score": f"{collusion_risk_score} / 100",
+            "is_tacit_collusion_viable": collusion_risk_score >= 80,
+            "forgiveness_trap_eliminated": automated_retaliation,
+            "regulatory_implication": "알고리즘의 실시간 가격 탐지와 자동 응징으로 인해 묵시적 담합(Tacit Collusion)이 자발적으로 형성·유지될 위험이 극도로 높음." if collusion_risk_score >= 80 else "불완전한 모니터링 또는 시차로 인해 가격 덤핑 이탈 유인이 존재함."
+        }
+
+
+class SevenStepGameDiagnostics:
+    """
+    2026 Master Diagnostic: 7-Step Practical Diagnostic Framework (20장)
+    """
+    @staticmethod
+    def diagnose_scenario(
+        is_sequential: bool,
+        is_repeated: bool,
+        has_asymmetric_info: bool,
+        can_enforce_contract: bool,
+        can_redesign_rules: bool
+    ) -> Dict[str, Any]:
+        prescriptions = []
+        if is_sequential:
+            prescriptions.append("순차 게임: 끝에서부터 거꾸로 읽는 역진귀납(Backward Induction)과 부분게임 완전균형(SPE) 적용.")
+        else:
+            prescriptions.append("동시 게임: 우월전략 배제 및 내시 균형(Nash Equilibrium) 도출.")
+            
+        if is_repeated:
+            prescriptions.append("반복 게임: 미래의 그림자(delta >= (T-R)/(T-P)) 확인 및 팃포탯(Tit-for-Tat) 상벌 구조 확립.")
+        else:
+            prescriptions.append("1회성 게임: 마지막 턴 배신 리스크 방어를 위한 선제 구속(Commitment) 또는 에스크로 설계.")
+            
+        if has_asymmetric_info:
+            prescriptions.append("정보 비대칭: 비용이 드는 신호 발송(Spence Signaling)과 자기선택 선별(Screening Menu) 도입.")
+            
+        if not can_enforce_contract:
+            prescriptions.append("계약 강제 불가: 상호 인질(Mutual Hostage), 마일스톤 분할 지급, BATNA 확보 필수.")
+            
+        if can_redesign_rules:
+            prescriptions.append("메커니즘 디자인: 경기자에서 룰 설계자로 전환하여 비크리/VCG/오스트롬 자치 규범 수립.")
+            
+        return {
+            "diagnostic_steps_passed": 7,
+            "prescriptions": prescriptions
+        }
+
+
 if __name__ == "__main__":
     main()

@@ -132,3 +132,82 @@ total_nodes: 8
 ### [[WIKI-GT-16]]: Platform Illusion & Executive BATNA Enforcement
 - **Axioms**: When basic needs are satiated, agents attribute platform rents to personal talent, resulting in hold-up demands.
 - **Rule**: Never rely on past favors. Counter hold-up by making outside alternatives (BATNA) constantly visible and cycling incentives via performance pay.
+
+
+---
+
+## 2026 확장판: AI 시대 및 확장 게임이론 온톨로지 (21개 장 체계 반영)
+
+| Node ID | Cluster | Title | Key Symbolic Variables | Linked Cascade Nodes |
+| :--- | :--- | :--- | :--- | :--- |
+| `[[WIKI-GT-17]]` | AI Era | Algorithmic Collusion & Autonomous Pricing Bots | `q_learning`, `tacit_collusion`, `instant_punishment`, `zero_forgiveness_trap` | `[[WIKI-GT-01]]`, `[[WIKI-GT-18]]` |
+| `[[WIKI-GT-18]]` | AI Era | AI Agent Swarm Alignment & Equilibrium Design | `rlhf_reward_hack`, `agent_negotiation`, `pareto_alignment` | `[[WIKI-GT-05]]`, `[[WIKI-GT-17]]` |
+| `[[WIKI-GT-19]]` | Market Structure | Oligopoly: Cournot vs Bertrand vs Stackelberg | `cournot_qty`, `bertrand_price_trap`, `stackelberg_first_mover` | `[[WIKI-GT-01]]`, `[[WIKI-GT-07]]` |
+| `[[WIKI-GT-20]]` | Resource Governance | Tragedy of the Commons & Ostrom 8 Principles | `cpr_boundary`, `ostrom_monitoring`, `graduated_sanction` | `[[WIKI-GT-01]]`, `[[WIKI-GT-03]]` |
+| `[[WIKI-GT-21]]` | Coordination | Common Knowledge, Schelling Focal Points & Stag Hunt | `common_knowledge_omega`, `schelling_focal_pt`, `risk_dominance` | `[[WIKI-GT-01]]`, `[[WIKI-GT-08]]` |
+| `[[WIKI-GT-22]]` | Conflict & Risk | War of Attrition & Brinkmanship (확률적 파국 위협) | `attrition_decay`, `brinkmanship_prob_p`, `accidental_catastrophe` | `[[WIKI-GT-06]]`, `[[WIKI-GT-07]]` |
+| `[[WIKI-GT-23]]` | Social Choice | Voting Paradox, Median Voter & Divide-and-Choose | `median_voter`, `condorcet_paradox`, `arrow_impossibility`, `divide_and_choose` | `[[WIKI-GT-05]]`, `[[WIKI-GT-08]]` |
+| `[[WIKI-GT-24]]` | Dynamic Macro | Network Externalities, Critical Mass & Cascades | `two_sided_market`, `critical_mass_s`, `information_cascade` | `[[WIKI-GT-08]]`, `[[WIKI-GT-21]]` |
+| `[[WIKI-GT-25]]` | Master Diagnostic | 8 Core Axioms & 7-Step Diagnostic Framework | `interdependence`, `backward_induction`, `shadow_future`, `7step_diagnostics` | All Nodes |
+
+---
+
+### [[WIKI-GT-17]]: Algorithmic Collusion & Autonomous Pricing (알고리즘 담합)
+- **Axioms**: Q-learning autonomous pricing bots learn supra-competitive tacit collusion without direct communication (Calvano et al. 2020, Assad et al. 2024).
+- **Core Mechanism**: Why bots collude better than humans:
+  1. **Instant Detection**: Real-time market price monitoring eliminating detection lags.
+  2. **Automated Retaliation**: Mechanical price drop without human hesitation, saving face, or blame avoidance.
+  3. **Zero Forgiveness Trap**: Eliminates human soft bargaining, permanently compressing defect temptation $(T - R 	o 0)$.
+
+### [[WIKI-GT-18]]: AI Agent Alignment & Swarm Equilibrium (AI 에이전트 정렬)
+- **Axioms**: Multi-agent LLM systems and Swarm robotics require mechanism design to prevent reward hacking and toxic race-to-the-bottom dynamics.
+- **Remedy**: Strategy-proof consensus protocols, automated truth-revelation audits, and verification gateways.
+
+### [[WIKI-GT-19]]: Oligopoly Competition (과점 경쟁과 베르트랑 함정)
+- **Axioms**:
+  - Cournot: Simultaneous quantity choice ($P > MC$, positive economic rents).
+  - Bertrand: Homogeneous price competition collapses to $P = MC$ (Bertrand Trap).
+  - Stackelberg: First-mover capacity commitment yields leader advantage.
+- **Remedy**: Never engage in Bertrand price wars. Shift to non-price quality differentiation, specialized niche care, and reputational capital.
+
+### [[WIKI-GT-20]]: Tragedy of the Commons & Ostrom 8 Principles (공유자원 자치 관리)
+- **Axioms**: Hard property rights or complete privatization are not the only solutions. Ostrom demonstrated sustainable community governance through 8 institutional design principles.
+- **8 Principles**: Clear boundaries, local rule alignment, collective choice, mutual monitoring, graduated sanctions, low-cost conflict resolution, recognized rights to organize, and nested enterprise layers.
+
+### [[WIKI-GT-21]]: Common Knowledge & Schelling Focal Points (공유지식과 셸링 포인트)
+- **Axioms**: Mutual knowledge ("everyone knows X") vs Common knowledge ("everyone knows that everyone knows... ad infinitum").
+- **Focal Point**: In coordination games with multiple equilibria, players coordinate without communication using shared cultural, salient, or psychological clues (Schelling Point).
+
+### [[WIKI-GT-22]]: War of Attrition & Brinkmanship (소모전과 벼랑끝 전술)
+- **Axioms**:
+  - War of Attrition: Waiting costs accrue over time until the weaker party concedes.
+  - Brinkmanship (Thomas Schelling): A credible threat created not by committing to deliberate suicide, but by deliberately relinquishing control and stepping onto a slippery slope where catastrophe occurs with probability $p > 0$.
+
+### [[WIKI-GT-23]]: Social Choice, Voting & Fair Division (투표와 나누기)
+- **Axioms**:
+  - Median Voter Theorem: In single-peaked 1D political space, policy converges to the median voter.
+  - Condorcet Paradox & Arrow's Impossibility: No democratic voting system can simultaneously satisfy unrestricted domain, Pareto efficiency, independence of irrelevant alternatives, and non-dictatorship.
+  - Divide-and-Choose: "One cuts, the other chooses" eliminates envy and enforces Pareto fairness.
+
+### [[WIKI-GT-24]]: Network Externality & Information Cascades (네트워크와 쏠림)
+- **Axioms**: Metcalfe's Law ($V \propto N^2$). Critical mass threshold determines market tipping.
+- **Information Cascade**: Rational agents ignore their private signal and imitate predecessors' public actions once the public evidence outweighs private confidence.
+
+### [[WIKI-GT-25]]: 8 Core Axioms & 7-Step Diagnostic Framework (8대 정수 & 7대 실전 진단)
+- **8 Core Axioms**:
+  1. 상호의존 (결과는 나 혼자 정하지 못한다)
+  2. 유인 (사람은 말이 아니라 보수에 반응한다)
+  3. 균형의 함정 (각자의 최선이 모두의 최선은 아니다)
+  4. 끝에서부터 (마지막 의사결정이 오늘의 행동을 규정한다)
+  5. 미래의 그림자 (다시 만날 사이에서는 협력이 이득이다)
+  6. 신빙성 (실행할 이유가 있는 약속과 위협만 힘이 있다)
+  7. 정보 (비용이 든 신호만 믿을 수 있다)
+  8. 규칙 설계 (사람을 바꾸려 하지 말고 게임의 규칙을 바꾼다)
+- **7-Step Diagnostic Framework**:
+  1) 누가 경기자인가?
+  2) 각자 무엇을 원하는가?
+  3) 동시인가 순서가 있는가?
+  4) 1회인가 반복인가?
+  5) 누가 무엇을 모르는가?
+  6) 약속을 강제할 수 있는가?
+  7) 게임의 규칙을 바꿀 수 있는가?
